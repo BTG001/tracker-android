@@ -8,7 +8,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
-        android:text="ToDoList"/>
+        android:text="ToDoList"
+        android:textColor="@color/colorTextIcons"/>
 
     <Button
         android:id="@+id/button"
