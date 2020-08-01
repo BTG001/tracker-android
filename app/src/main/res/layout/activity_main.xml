@@ -10,7 +10,7 @@
         android:layout_marginTop="35dp"
         android:text="ToDoList"
         android:textColor="@color/colorTextIcons"
-        android:textSize="40sp"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <Button
