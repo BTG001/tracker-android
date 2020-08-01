@@ -9,14 +9,18 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:text="ToDoList"
-        android:textColor="@color/colorTextIcons"/>
+        android:textColor="@color/colorTextIcons"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Create a List" />
+        android:background="@color/colorAccent"
+        android:text="Create Your List"
+        android:textColor="@color/colorTextIcons" />
 
 </RelativeLayout>
