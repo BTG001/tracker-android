@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
@@ -32,7 +33,10 @@ public class FileHelper {
         ArrayList<String> itemsList = null;
         try {
             FileInputStream fis = context.openFileInput(FILENAME);
+            ObjectInputStream ois = new ObjectInputStream(fis);
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
