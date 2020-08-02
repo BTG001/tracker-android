@@ -14,10 +14,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class ListActivity extends AppCompatActivity implements View.OnClickListener {
-    private EditText itemET;
-    private Button btn;
-    private ListView itemList;
+    @BindView(R.id.item_edit_text) EditText itemET;
+    @BindView(R.id.add_btn) Button btn;
+    @BindView(R.id.item_list) ListView itemList;
 
     private ArrayList<String> items;
     private ArrayAdapter<String> adapter;
@@ -26,10 +29,7 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-
-        itemET = findViewById(R.id.item_edit_text);
-        btn = findViewById(R.id.add_btn);
-        itemList = findViewById(R.id.item_list);
+        ButterKnife.bind(this);
 
         items = FileHelper.readData(this);
 
