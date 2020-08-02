@@ -2,6 +2,7 @@ package com.moringa.mytodolist;
 
 import android.content.Context;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
@@ -11,6 +12,10 @@ public class FileHelper {
 
     public static void writeData(ArrayList<String> items, Context context) {
 
-        FileOutputStream fos = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
+        try {
+            FileOutputStream fos = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
