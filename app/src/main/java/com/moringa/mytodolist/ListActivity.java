@@ -33,6 +33,12 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.add_btn:
+                String itemEntered = itemET.getText().toString();
+                adapter.add(itemEntered);
 
+                break;
+        }
     }
 }
