@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,6 +37,13 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
         itemList.setAdapter(adapter);
 
         btn.setOnClickListener(this);
+        itemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                items.remove(position);
+                adapter.notifyDataSetChanged();
+            }
+        });
     }
 
     @Override
