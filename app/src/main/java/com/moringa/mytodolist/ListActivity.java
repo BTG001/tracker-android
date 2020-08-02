@@ -3,6 +3,7 @@ package com.moringa.mytodolist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -15,6 +16,7 @@ public class ListActivity extends AppCompatActivity {
     private ListView itemList;
 
     private ArrayList<String> items;
+    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
