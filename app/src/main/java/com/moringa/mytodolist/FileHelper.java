@@ -17,6 +17,8 @@ public class FileHelper {
         try {
             FileOutputStream fos = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(items);
+            oos.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
