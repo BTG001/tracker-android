@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -39,6 +40,7 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
                 adapter.add(itemEntered);
                 itemET.setText("");
 
+                Toast.makeText(ListActivity.this, "Item Added", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
