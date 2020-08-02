@@ -37,6 +37,7 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.add_btn:
                 String itemEntered = itemET.getText().toString();
                 adapter.add(itemEntered);
+                itemET.setText("");
 
                 break;
         }
