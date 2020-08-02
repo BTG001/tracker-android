@@ -11,12 +11,13 @@
         app:srcCompat="@drawable/list1" />
 
     <TextView
+        android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
-        android:id="@+id/appNameTextView"
+        android:fontFamily="@font/roboto"
         android:text="ToDoList"
         android:textColor="@color/colorTextIcons"
         android:textSize="50sp"

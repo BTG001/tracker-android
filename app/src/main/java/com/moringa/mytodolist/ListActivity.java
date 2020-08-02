@@ -36,6 +36,7 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
         itemList.setAdapter(adapter);
 
+
         btn.setOnClickListener(this);
         itemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
