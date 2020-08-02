@@ -7,16 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
-    private Button mCreateYourListButton;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
+public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.createYourListButton) Button mCreateYourListButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
-        mCreateYourListButton = (Button)findViewById(R.id.createYourListButton);
         mCreateYourListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
