@@ -30,6 +30,10 @@ public class FileHelper {
 
     public static ArrayList<String> readData(Context context) {
         ArrayList<String> itemsList = null;
-        FileInputStream fis = context.openFileInput(FILENAME);
+        try {
+            FileInputStream fis = context.openFileInput(FILENAME);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
