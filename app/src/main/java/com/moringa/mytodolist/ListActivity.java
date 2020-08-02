@@ -45,6 +45,7 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
                 adapter.add(itemEntered);
                 itemET.setText("");
 
+                FileHelper.writeData(items, this);
                 Toast.makeText(ListActivity.this, "Item Added", Toast.LENGTH_SHORT).show();
                 break;
         }
