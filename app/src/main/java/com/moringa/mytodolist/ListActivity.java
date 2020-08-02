@@ -29,6 +29,8 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
         btn = findViewById(R.id.add_btn);
         itemList = findViewById(R.id.item_list);
 
+        items = FileHelper.readData(this);
+
         btn.setOnClickListener(this);
     }
 

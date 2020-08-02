@@ -34,10 +34,13 @@ public class FileHelper {
         try {
             FileInputStream fis = context.openFileInput(FILENAME);
             ObjectInputStream ois = new ObjectInputStream(fis);
+            itemsList = new ArrayList<>();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        return itemsList;
     }
 }
